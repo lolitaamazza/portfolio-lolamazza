@@ -70,9 +70,9 @@ export default function App() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-64 pb-48 md:pt-48 md:pb-32 px-6 max-w-7xl mx-auto relative overflow-hidden mb-32 md:mb-0">
+      <section className="pt-32 md:pt-48 pb-24 md:pb-32 px-6 max-w-7xl mx-auto relative mb-12 md:mb-0">
 
-        <div className="w-full relative h-full flex flex-col justify-center mt-8 md:mt-0">
+        <div className="w-full relative h-full flex flex-col justify-center mt-28 md:mt-0">
 
           {/* Background Doodles for Hero Section */}
           <SparkleFour className="absolute top-1/4 left-10 z-0 opacity-80" color="#FF1493" />
@@ -159,7 +159,7 @@ export default function App() {
               initial={{ opacity: 0, scale: 0.8, rotate: 10 }}
               animate={{ opacity: 1, scale: 1, rotate: 4 }}
               transition={{ delay: 0.5, type: "spring" }}
-              className="relative w-full max-w-sm md:max-w-md"
+              className="relative w-full max-w-sm md:max-w-md mt-16 md:mt-0 mx-auto"
             >
               {/* Binder Clip */}
               <div className="absolute -top-6 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center drop-shadow-[0_4px_6px_rgba(0,0,0,0.5)] pointer-events-none">
