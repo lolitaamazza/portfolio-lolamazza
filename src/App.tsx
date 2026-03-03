@@ -70,7 +70,8 @@ export default function App() {
       </nav>
 
       {/* Hero Section */}
-      <section className="min-h-screen flex flex-col justify-center relative px-6 pt-32 pb-20 max-w-7xl mx-auto bg-dots">
+       <section className="min-h-screen flex flex-col justify-center relative pt-32 pb-20 bg-dots overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 w-full relative h-full flex flex-col justify-center"></div>
         
 {/* Background Doodles for Hero Section */}
         <SparkleFour className="absolute top-1/4 left-10 z-0 opacity-80" color="#FF1493" />
@@ -94,7 +95,7 @@ export default function App() {
         <motion.div 
           animate={{ y: [0, -15, 0], rotate: [5, 10, 5] }} 
           transition={{ repeat: Infinity, duration: 4, ease: "easeInOut", delay: 1 }}
-          className="absolute top-1/4 left-1/3 sticker px-4 py-2 bg-yellow-400 font-bold text-lg z-20"
+          className="absolute bottom-16 left-10 sticker px-4 py-2 bg-[#00FF00] font-bold text-lg z-20"
         >
           UX/UI
         </motion.div>
@@ -102,7 +103,7 @@ export default function App() {
         <motion.div 
           animate={{ y: [0, 15, 0], rotate: [-5, -10, -5] }} 
           transition={{ repeat: Infinity, duration: 6, ease: "easeInOut", delay: 2 }}
-           className="absolute bottom-32 left-10 sticker px-4 py-2 bg-[#00FF00] font-bold text-lg z-20"
+           className="absolute bottom-14 left-10 sticker px-4 py-2 bg-[#00FF00] font-bold text-lg z-20"
         >
           Creative Dev
         </motion.div>
@@ -185,7 +186,7 @@ export default function App() {
  </div>
 
         {/* Marquee Banner */}
-        <div className="absolute -bottom-6 left-0 w-full overflow-hidden bg-black text-white py-3 border-y-4 border-black z-30 transform rotate-1">
+        <div className="absolute bottom-0 left-0 w-full overflow-hidden bg-black text-white py-3 border-y-4 border-black z-30">
           <div className="marquee-track font-display text-2xl uppercase tracking-wider">
             <span className="mx-4">Diseño Multimedial</span> <Star className="inline w-6 h-6 text-yellow-400 fill-yellow-400 mx-4" />
             <span className="mx-4">Desarrollo Frontend</span> <Star className="inline w-6 h-6 text-pink-500 fill-pink-500 mx-4" />
