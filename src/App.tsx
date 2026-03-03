@@ -146,7 +146,7 @@ export default function App() {
                   src={miFoto}
                   alt="Lola" 
                   referrerPolicy="no-referrer"
-                  className="w-full h-full object-cover filter contrast-125 saturate-150"
+                  className="w-full h-full object-cover filter contrast-15 saturate-150"
                 />
               </div>
               <p className="font-handwriting text-3xl text-center mt-4 text-zinc-900">¡Lista para crear!</p>
@@ -180,7 +180,7 @@ export default function App() {
 
                   <h4 className="font-bold text-2xl mb-1">Licenciatura en Tecnología Multimedia</h4>
                   <p className="font-serif text-zinc-600 mb-2">Universidad Creativa • 2024 - Presente</p>
-                  <p className="font-handwriting text-2xl text-pink-500 transform -rotate-2 mt-2 leading-tight">¡Próximamente Técnica en Comunicación Interactiva y Diseño Multimedial!</p>
+                  <p className="font-handwriting text-2xl text-pink-500 mt-2 leading-tight">¡Próximamente Técnica en Comunicación Interactiva y Diseño Multimedial!</p>
                 </div>
                 
                 {/* Block 2 */}
@@ -214,9 +214,9 @@ export default function App() {
                 <h4 className="font-bold text-2xl mb-1">Diseñadora Freelance</h4>
                 <p className="font-serif text-zinc-600 mb-4">Independiente • 2023 - Presente</p>
                 <ul className="font-serif text-zinc-700 list-disc list-inside space-y-2">
-                  <li>Creación de identidades visuales rebeldes.</li>
-                  <li>Diseño de interfaces web interactivas.</li>
-                  <li>Animación de gráficos para redes sociales.</li>
+                  <li>Creación de identidades visuales y sistemas de diseño enfocados en la coherencia de marca en múltiples plataformas digitales</li>
+                  <li>Desarrollo de prototipos interactivos y maquetación responsive, asegurando la accesibilidad y funcionalidad en diversos dispositivos</li>
+                  <li>Diseño y producción de piezas de comunicación de alto impacto y contenido dinámico para redes sociales</li>
                 </ul>
               </div>
             </div>
@@ -229,7 +229,6 @@ export default function App() {
               <div className="flex flex-wrap gap-4">
                 <span className="sticker px-6 py-2 bg-[#ffb3ba] font-bold text-lg -rotate-2">Español (Nativo)</span>
                 <span className="sticker px-6 py-2 bg-[#baffc9] font-bold text-lg rotate-3">Inglés (Avanzado)</span>
-                <span className="sticker px-6 py-2 bg-[#bae1ff] font-bold text-lg -rotate-1">Portugués (Básico)</span>
               </div>
             </div>
           </div>
@@ -362,7 +361,7 @@ export default function App() {
           </motion.h2>
           
           <p className="text-4xl font-handwriting text-zinc-700 mb-12">
-            ¿Tienes una idea loca? ¡Escríbeme! <Heart className="inline text-pink-500 fill-pink-500" />
+            ¿Tenés una idea loca? ¡Escribime! <Heart className="inline text-pink-500 fill-pink-500" />
           </p>
 
           <div className="flex flex-wrap justify-center gap-6">
@@ -388,7 +387,7 @@ export default function App() {
               href="#"
               className="sticker flex items-center gap-3 bg-pink-500 text-white px-8 py-4 font-display text-2xl uppercase tracking-wider"
             >
-              <Github className="w-6 h-6" /> GitHub
+              <Behance className="w-6 h-6" /> Behance
             </motion.a>
           </div>
         </div>
