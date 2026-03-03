@@ -84,13 +84,12 @@ const PROJECTS = [
   },
   {
     id: 5,
-    title: 'Natura Redesign',
-    category: 'Branding / UI',
+    title: 'Bookish - Social Media Content Design',
+    category: 'Content Design',
     color: 'bg-blue-400',
     rotation: '-rotate-2',
-     image: 'https://mir-s3-cdn-cf.behance.net/projects/max_808/16f577223685651.68a5043ec905d.jpg',
-   
-    link: 'https://www.behance.net/gallery/223685651/Natura-Redesign',
+    image: 'https://mir-s3-cdn-cf.behance.net/projects/max_808/664c43245147859.Y3JvcCwxMDgwLDg0NCwwLDEzMA.png',
+    link: 'https://www.behance.net/gallery/245147859/Bookish-Social-Media-Content-Design',
   },
   {
    title: 'Umami Brand Identity',

@@ -10,8 +10,9 @@ function getCovers(id: number) {
     if (coversIdx !== -1) {
       console.log(`P${id} covers snippet:`, snippet.substring(coversIdx, coversIdx + 1500));
     }
+  } else {
+    console.log(`P${id} not found in profile.html`);
   }
 }
 
-getCovers(231720993);
-getCovers(223685651);
+getCovers(245147859);
