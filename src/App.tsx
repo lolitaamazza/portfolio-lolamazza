@@ -70,8 +70,9 @@ export default function App() {
       </nav>
 
       {/* Hero Section */}
-       <section className="min-h-screen flex flex-col justify-center relative pt-32 pb-20 bg-dots overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 w-full relative h-full flex flex-col justify-center"></div>
+       <section className="py-32 px-6 max-w-7xl mx-auto relative bg-dots overflow-hidden">
+        
+        <div className="w-full relative h-full flex flex-col justify-center">
         
 {/* Background Doodles for Hero Section */}
         <SparkleFour className="absolute top-1/4 left-10 z-0 opacity-80" color="#FF1493" />
@@ -183,10 +184,13 @@ export default function App() {
             </div>
             <div className="washi-tape washi-pink w-24 -bottom-4 right-4 z-20 -rotate-12"></div>
           </motion.div>
+          
  </div>
+ </div>
+    </section>
 
         {/* Marquee Banner */}
-        <div className="absolute bottom-0 left-0 w-full overflow-hidden bg-black text-white py-3 border-y-4 border-black z-30">
+        <div className="w-full overflow-hidden bg-black text-white py-3 border-y-4 border-black z-30 relative">
           <div className="marquee-track flex items-center whitespace-nowrap font-display text-2xl uppercase tracking-wider w-max">
             <span className="mx-4">Diseño Multimedial</span> <Star className="inline w-6 h-6 text-yellow-400 fill-yellow-400 mx-4" />
             <span className="mx-4">Desarrollo Frontend</span> <Star className="inline w-6 h-6 text-pink-500 fill-pink-500 mx-4" />
@@ -206,7 +210,6 @@ export default function App() {
             <span className="mx-4">Experiencias Interactivas</span> <Star className="inline w-6 h-6 text-green-400 fill-green-400 mx-4" />
           </div>
         </div>
-      </section>
 
       {/* Bio & Skills Section */}
       <section id="bio" className="py-32 px-6 max-w-7xl mx-auto relative">
