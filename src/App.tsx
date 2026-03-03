@@ -111,7 +111,7 @@ export default function App() {
               <div className="washi-tape washi-lavender w-32 -top-4 left-4 -rotate-3"></div>
               <h2 className="font-display text-5xl text-pink-500 mb-4 uppercase tracking-wide">Hola, soy Lola</h2>
               <p className="font-serif text-lg leading-relaxed text-zinc-700">
-                Estudiante de Tecnología Multimedia apasionada por romper las reglas visuales. Me dedico a crear experiencias digitales vibrantes, mezclando el caos del collage con la precisión del código. Si buscas algo aburrido, estás en el lugar equivocado.
+                Estudiante de Tecnología Multimedial enfocada en la creación de ecosistemas digitales integrales. Mi trabajo conecta el diseño visual (UX/UI y branding) con el desarrollo front-end, buscando un equilibrio constante entre la estética, la funcionalidad técnica y los objetivos de negocio."
               </p>
             </motion.div>
           </div>
@@ -123,6 +123,21 @@ export default function App() {
             transition={{ delay: 0.5, type: "spring" }}
             className="relative w-full max-w-sm md:max-w-md"
           >
+             {/* Binder Clip */}
+            <div className="absolute -top-6 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center drop-shadow-[0_4px_6px_rgba(0,0,0,0.5)] pointer-events-none">
+              {/* Wire handles */}
+              <div className="flex gap-2 mb-[-10px] z-0">
+                <div className="w-6 h-10 border-[3px] border-zinc-300 rounded-t-full rounded-b-sm"></div>
+                <div className="w-6 h-10 border-[3px] border-zinc-300 rounded-t-full rounded-b-sm"></div>
+              </div>
+              {/* Clip body */}
+              <div className="w-24 h-8 bg-zinc-900 rounded-sm relative z-10 border-t border-zinc-700 shadow-inner flex flex-col justify-between items-center py-1">
+                {/* Top silver hinge */}
+                <div className="w-[85%] h-1 bg-zinc-400 rounded-full"></div>
+                {/* Bottom silver hinge */}
+                <div className="w-[95%] h-1.5 bg-zinc-300 rounded-full"></div>
+              </div>
+            </div>
             <div className="washi-tape washi-yellow w-40 -top-4 left-1/2 -translate-x-1/2 z-20 rotate-2"></div>
             <div className="bg-white p-4 pb-16 border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] relative z-10">
               <div className="film-grain border-4 border-black aspect-[3/4] overflow-hidden">
@@ -220,22 +235,22 @@ export default function App() {
 
           {/* Software & Skills */}
           <div className="md:col-span-5 space-y-16">
-            <div className="sticker bg-white text-zinc-900 p-8 rotate-2">
+                      <div className="bg-white border-4 border-black rounded-2xl shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-8 rotate-2 relative">
               <h3 className="font-display text-4xl mb-8 uppercase text-zinc-900">Software</h3>
               <div className="space-y-6">
                 {SKILLS.map((skill, index) => (
                   <div 
                     key={index}
-                    className="group flex items-center gap-4"
+                    className="flex items-center gap-4"
                   >
-                    <div className={`circular-sticker w-14 h-14 shrink-0 ${skill.color} text-black transition-all duration-300 group-hover:scale-110 group-hover:rotate-12`}>
+                    <div className={`w-14 h-14 shrink-0 rounded-full border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] ${skill.color} text-black flex items-center justify-center`}>
                       <skill.icon size={24} />
                     </div>
                     <div className="flex-1">
                       <p className="font-sans font-bold text-lg mb-1">{skill.name}</p>
-                      <div className="marker-bar-bg">
+                       <div className="w-full h-3 bg-zinc-200 rounded-full border-2 border-black overflow-hidden relative">
                         <motion.div 
-                          className="marker-bar-fill"
+                           className="h-full bg-pink-500 border-r-2 border-black"
                           initial={{ width: 0 }}
                           whileInView={{ width: skill.level }}
                           viewport={{ once: true }}
@@ -248,7 +263,7 @@ export default function App() {
               </div>
             </div>
 
-            <div className="irregular-border bg-white p-8 relative -rotate-1">
+             <div className="bg-white border-4 border-black rounded-2xl shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-8 relative -rotate-1">
               <div className="washi-tape washi-pink w-16 -top-3 -left-4 rotate-45"></div>
               <div className="washi-tape washi-pink w-16 -bottom-3 -right-4 rotate-45"></div>
               
@@ -260,7 +275,7 @@ export default function App() {
                 {['Layout Design', 'Branding', 'UI Design', 'Photo Manipulation', 'Basic Video Edit', 'Motion Graphics'].map((skill) => (
                   <span 
                     key={skill}
-                    className="px-4 py-2 rounded-full border border-zinc-800 bg-transparent font-sans text-zinc-900 text-sm font-bold hover:bg-zinc-100 hover:-translate-y-0.5 hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,0.8)] transition-all cursor-pointer"
+                     className="px-4 py-2 rounded-full border-2 border-black bg-white font-sans text-zinc-900 text-sm font-bold hover:bg-zinc-100 hover:-translate-y-0.5 hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all cursor-pointer"
                   >
                     {skill}
                   </span>
