@@ -13,26 +13,8 @@ body {
   background-image: 
     linear-gradient(to right, rgba(0,0,0,0.05) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(0,0,0,0.05) 1px, transparent 1px);
-  background-size: 30px 30px;
+  background-size: 20px 20px;
   position: relative;
-  /* Custom Sparkle Cursor */
-  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23FF1493' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6'/><path d='m19 12-5-5'/><path d='m19 12-5 5'/></svg>"), auto;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  top: 0; left: 0; width: 100vw; height: 100vh;
-  opacity: 0.5;
-  pointer-events: none;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-  z-index: 50;
-  mix-blend-mode: multiply;
-}
-
-/* Interactive elements get a different cursor */
-a, button, .cursor-pointer {
-  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24' fill='%23FFFF00' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polygon points='12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2'/></svg>"), pointer;
 }
 
 /* Washi tape effect */
@@ -96,6 +78,23 @@ a, button, .cursor-pointer {
   transform: rotate(-1deg);
 }
 
+.highlighter-yellow {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+.highlighter-yellow::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: -5%;
+  width: 110%;
+  height: 40%;
+  background-color: #ffe600; /* Pure yellow */
+  z-index: -1;
+  transform: rotate(-1deg);
+}
+
 .highlighter-pink::after {
   background-color: #ff1493;
 }
@@ -106,17 +105,17 @@ a, button, .cursor-pointer {
   -webkit-text-stroke: 2px black;
 }
 
-/* Hand-drawn progress bar */
-.progress-bar-container {
+/* Marker progress bar */
+.marker-bar-bg {
   width: 100%;
-  height: 16px;
-  border: 3px solid black;
+  height: 12px;
+  background-color: #e5e7eb;
   border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-  padding: 2px;
-  background: white;
+  position: relative;
+  overflow: hidden;
 }
 
-.progress-bar-fill {
+.marker-bar-fill {
   height: 100%;
   background-color: #ff1493;
   border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;

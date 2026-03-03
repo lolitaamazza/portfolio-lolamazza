@@ -1,14 +1,15 @@
 import { motion } from 'motion/react';
-import { ArrowRight, Github, Linkedin, Mail, Star, Zap, Figma, PenTool, Video, MonitorPlay, Layers, Heart } from 'lucide-react';
+import { ArrowRight, Github, Linkedin, Mail, Star, Zap, Figma, PenTool, Video, MonitorPlay, Layers, Heart, Scissors } from 'lucide-react';
 
 const PORTFOLIO_LETTERS = ['P', 'O', 'R', 'T', 'F', 'O', 'L', 'I', 'O'];
 
 const SKILLS = [
-  { name: 'Illustrator', icon: PenTool, level: '90%', color: 'bg-[#ff9a00]' },
-  { name: 'Photoshop', icon: Layers, level: '85%', color: 'bg-[#31a8ff]' },
-  { name: 'After Effects', icon: MonitorPlay, level: '75%', color: 'bg-[#9999ff]' },
-  { name: 'Premiere', icon: Video, level: '80%', color: 'bg-[#ea77ff]' },
-  { name: 'Figma', icon: Figma, level: '95%', color: 'bg-[#0acf83]' },
+  { name: 'Figma', icon: Figma, level: '95%', color: 'bg-[#baffc9]' },
+  { name: 'Illustrator', icon: PenTool, level: '90%', color: 'bg-[#ffdfba]' },
+  { name: 'Photoshop', icon: Layers, level: '85%', color: 'bg-[#bae1ff]' },
+  { name: 'After Effects', icon: MonitorPlay, level: '75%', color: 'bg-[#e6ccff]' },
+  { name: 'Premiere', icon: Video, level: '80%', color: 'bg-[#ffb3ba]' },
+  { name: 'CapCut', icon: Scissors, level: '85%', color: 'bg-[#ffffba]' },
 ];
 
 const PROJECTS = [
@@ -70,14 +71,6 @@ export default function App() {
         
         {/* Decorative Elements */}
         <motion.div 
-          animate={{ y: [0, -15, 0], rotate: [12, 15, 12] }} 
-          transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-          className="absolute top-1/4 left-5 md:left-20 circular-sticker w-32 h-32 bg-yellow-400 text-black font-handwriting text-2xl z-20"
-        >
-          <div className="transform -rotate-12">¡Hazlo<br/>Épico!</div>
-        </motion.div>
-        
-        <motion.div 
           animate={{ y: [0, 20, 0], rotate: [-15, -10, -15] }} 
           transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
           className="absolute bottom-1/4 right-5 md:right-20 circular-sticker w-28 h-28 bg-pink-500 text-white font-handwriting text-2xl z-20"
@@ -116,7 +109,7 @@ export default function App() {
               className="sticker bg-white p-8 max-w-xl rotate-1"
             >
               <div className="washi-tape washi-lavender w-32 -top-4 left-4 -rotate-3"></div>
-              <h2 className="font-handwriting text-5xl text-pink-500 mb-4">Hola, soy Lola</h2>
+              <h2 className="font-display text-5xl text-pink-500 mb-4 uppercase tracking-wide">Hola, soy Lola</h2>
               <p className="font-serif text-lg leading-relaxed text-zinc-700">
                 Estudiante de Tecnología Multimedia apasionada por romper las reglas visuales. Me dedico a crear experiencias digitales vibrantes, mezclando el caos del collage con la precisión del código. Si buscas algo aburrido, estás en el lugar equivocado.
               </p>
@@ -156,18 +149,35 @@ export default function App() {
           <div className="md:col-span-7 space-y-16">
             <div>
               <h3 className="font-display text-5xl mb-8 uppercase tracking-wide">
-                <span className="highlighter-neon">Educación</span>
+                <span className="highlighter-yellow">Educación</span>
               </h3>
-              <div className="space-y-6">
+              <div className="space-y-8">
+                {/* Block 1 */}
                 <div className="irregular-border bg-white p-6 relative">
-                  <div className="washi-tape washi-pink w-16 -top-3 -left-2 rotate-45"></div>
+                  <div className="washi-tape washi-pink w-16 -top-3 -left-4 rotate-45"></div>
+                  <div className="washi-tape washi-pink w-16 -bottom-3 -right-4 rotate-45"></div>
+                  
+                  {/* Overlapping sticker pin (Figma) */}
+                  <div className="absolute -right-6 top-1/2 -translate-y-1/2 circular-sticker w-12 h-12 bg-[#baffc9] text-black z-10 rotate-12">
+                    <Figma size={20} />
+                  </div>
+
                   <h4 className="font-bold text-2xl mb-1">Licenciatura en Tecnología Multimedia</h4>
-                  <p className="font-serif text-zinc-600 mb-2">Universidad Creativa • 2023 - Presente</p>
-                  <p className="font-handwriting text-xl text-pink-500">¡Casi terminando!</p>
+                  <p className="font-serif text-zinc-600 mb-2">Universidad Creativa • 2024 - Presente</p>
+                  <p className="font-handwriting text-2xl text-pink-500 transform -rotate-2 mt-2 leading-tight">¡Próximamente Técnica en Comunicación Interactiva y Diseño Multimedial!</p>
                 </div>
-                <div className="irregular-border bg-white p-6">
-                  <h4 className="font-bold text-2xl mb-1">Bootcamp de Diseño UI/UX</h4>
-                  <p className="font-serif text-zinc-600">Design Academy • 2022</p>
+                
+                {/* Block 2 */}
+                <div className="irregular-border bg-white p-6 relative">
+                  <div className="washi-tape washi-pink w-16 -top-3 -right-4 -rotate-45"></div>
+                  
+                  {/* Overlapping sticker pin (Photoshop) */}
+                  <div className="absolute -left-6 top-1/2 -translate-y-1/2 circular-sticker w-12 h-12 bg-[#bae1ff] text-black z-10 -rotate-12">
+                    <Layers size={20} />
+                  </div>
+
+                  <h4 className="font-bold text-2xl mb-1">Hackatones UX/UI</h4>
+                  <p className="font-serif text-zinc-600">Participación en múltiples ediciones</p>
                 </div>
               </div>
             </div>
@@ -177,7 +187,14 @@ export default function App() {
                 <span className="highlighter-pink">Experiencia</span>
               </h3>
               <div className="irregular-border bg-white p-6 relative rotate-1">
-                <div className="washi-tape washi-lavender w-24 -top-4 right-10 -rotate-6"></div>
+                <div className="washi-tape washi-pink w-24 -top-4 right-10 -rotate-6"></div>
+                <div className="washi-tape washi-pink w-16 -bottom-3 -left-4 rotate-45"></div>
+                
+                {/* Overlapping sticker pin (Illustrator) */}
+                <div className="absolute -right-5 -top-5 circular-sticker w-14 h-14 bg-[#ffdfba] text-black z-10 rotate-6">
+                  <PenTool size={24} />
+                </div>
+
                 <h4 className="font-bold text-2xl mb-1">Diseñadora Freelance</h4>
                 <p className="font-serif text-zinc-600 mb-4">Independiente • 2023 - Presente</p>
                 <ul className="font-serif text-zinc-700 list-disc list-inside space-y-2">
@@ -191,25 +208,25 @@ export default function App() {
 
           {/* Skills & Languages */}
           <div className="md:col-span-5 space-y-16">
-            <div className="sticker bg-zinc-900 text-white p-8 rotate-2">
-              <h3 className="font-display text-4xl mb-8 uppercase text-yellow-400">Software & Skills</h3>
+            <div className="sticker bg-white text-zinc-900 p-8 rotate-2">
+              <h3 className="font-display text-4xl mb-8 uppercase text-zinc-900">Software</h3>
               <div className="space-y-6">
                 {SKILLS.map((skill, index) => (
-                  <div key={index}>
-                    <div className="flex items-center gap-4 mb-2">
-                      <div className={`circular-sticker w-12 h-12 ${skill.color} text-black`}>
-                        <skill.icon size={24} />
-                      </div>
-                      <span className="font-bold text-xl">{skill.name}</span>
+                  <div 
+                    key={index}
+                    className="group flex items-center gap-4 cursor-pointer"
+                  >
+                    <div className={`circular-sticker w-14 h-14 shrink-0 ${skill.color} text-black transition-transform group-hover:scale-110 group-hover:rotate-12`}>
+                      <skill.icon size={24} />
                     </div>
-                    <div className="progress-bar-container">
-                      <motion.div 
-                        initial={{ width: 0 }}
-                        whileInView={{ width: skill.level }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 1, delay: 0.2 }}
-                        className="progress-bar-fill"
-                      ></motion.div>
+                    <div className="flex-1">
+                      <p className="font-sans font-bold text-lg mb-1">{skill.name}</p>
+                      <div className="marker-bar-bg">
+                        <div 
+                          className="marker-bar-fill"
+                          style={{ width: skill.level }}
+                        ></div>
+                      </div>
                     </div>
                   </div>
                 ))}
