@@ -47,37 +47,61 @@ const SKILLS = [
 const PROJECTS = [
   {
     id: 1,
-    title: "Campaña Neón",
-    category: "Dirección de Arte",
+    title: 'Diseño editorial',
+    category: "Design",
     color: "bg-yellow-400",
     rotation: "-rotate-2",
-    image: "https://picsum.photos/seed/neon/800/600",
+    image: 'https://mir-s3-cdn-cf.behance.net/project_modules/1400/e151f7223686571.67fd809b8c5eb.png',
+    link: 'https://www.behance.net/gallery/223686571/Taylor-Swift-Magazine',
   },
   {
     id: 2,
-    title: "App de Música",
-    category: "UI/UX Design",
+    title: 'Rebranding Snapchat',
+    category: "Branding",
     color: "bg-pink-500",
     rotation: "rotate-2",
-    image: "https://picsum.photos/seed/musicapp/800/600",
+    image: 'https://mir-s3-cdn-cf.behance.net/project_modules/hd/aed100223695715.680d314157b04.png',
+    link: 'https://www.behance.net/gallery/223695715/Snapchat-Brand-Redesign-Manual',
   },
   {
     id: 3,
-    title: "Festival Visuals",
-    category: "Motion Graphics",
+    title: 'UX/UI University Totem',
+    category: 'UX/UI Design',
     color: "bg-purple-400",
     rotation: "-rotate-1",
-    image: "https://picsum.photos/seed/festival/800/600",
+    image: 'https://mir-s3-cdn-cf.behance.net/projects/max_808/c2f738233407769.Y3JvcCwxODQ3LDE0NDQsMCww.jpg',
+    link: 'https://www.behance.net/gallery/233407769/UXUI-Case-Study-University-Totem-for-Campus',
   },
+  
   {
     id: 4,
-    title: "Marca Rebelde",
-    category: "Branding",
+    title: 'Furniture E-commerce',
+    category: 'Web Design',
     color: "bg-green-400",
     rotation: "rotate-3",
-    image: "https://picsum.photos/seed/rebel/800/600",
+   image: 'https://mir-s3-cdn-cf.behance.net/projects/max_808/738db7231720993.Y3JvcCwxNDQwLDExMjYsMCwxNjM2.png',
+    link: 'https://www.behance.net/gallery/231720993/Modern-Furniture-Minimalist-E-commerce-Web-Design',
+  },
+  {
+    id: 5,
+    title: 'Natura Redesign',
+    category: 'Branding / UI',
+    color: 'bg-blue-400',
+    rotation: '-rotate-2',
+    image: 'https://mir-s3-cdn-cf.behance.net/project_modules/hd/793e2c223685651.67fd7c2b071da.png',
+    link: 'https://www.behance.net/gallery/223685651/Natura-Redesign',
+  },
+  {
+    id: 6,
+    title: 'Más Proyectos',
+    category: 'Behance Profile',
+    color: 'bg-orange-400',
+    rotation: 'rotate-1',
+    image: 'https://picsum.photos/seed/moreprojects/800/600',
+    link: 'https://www.behance.net/lolamazzaoliver',
   },
 ];
+
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -639,7 +663,7 @@ export default function App() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
             {PROJECTS.map((project, index) => (
               <motion.a
-                href="https://www.behance.net/lolamazzaoliver"
+                href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
                 key={project.id}
