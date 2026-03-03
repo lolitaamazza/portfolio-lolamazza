@@ -1,15 +1,16 @@
 import { motion } from 'motion/react';
 import { ArrowRight, Github, Linkedin, Mail, Star, Zap, Figma, PenTool, Video, MonitorPlay, Layers, Heart, Scissors } from 'lucide-react';
+import miFoto from './images/fotoperfil.jpeg';
 
 const PORTFOLIO_LETTERS = ['P', 'O', 'R', 'T', 'F', 'O', 'L', 'I', 'O'];
 
 const SKILLS = [
   { name: 'Figma', icon: Figma, level: '95%', color: 'bg-[#baffc9]' },
-  { name: 'Illustrator', icon: PenTool, level: '90%', color: 'bg-[#ffdfba]' },
-  { name: 'Photoshop', icon: Layers, level: '85%', color: 'bg-[#bae1ff]' },
+  { name: 'Illustrator', icon: PenTool, level: '100%', color: 'bg-[#ffdfba]' },
+  { name: 'Photoshop', icon: Layers, level: '100%', color: 'bg-[#bae1ff]' },
   { name: 'After Effects', icon: MonitorPlay, level: '75%', color: 'bg-[#e6ccff]' },
   { name: 'Premiere', icon: Video, level: '80%', color: 'bg-[#ffb3ba]' },
-  { name: 'CapCut', icon: Scissors, level: '85%', color: 'bg-[#ffffba]' },
+  { name: 'CapCut', icon: Scissors, level: '100%', color: 'bg-[#ffffba]' },
 ];
 
 const PROJECTS = [
@@ -111,7 +112,7 @@ export default function App() {
               <div className="washi-tape washi-lavender w-32 -top-4 left-4 -rotate-3"></div>
               <h2 className="font-display text-5xl text-pink-500 mb-4 uppercase tracking-wide">Hola, soy Lola</h2>
               <p className="font-serif text-lg leading-relaxed text-zinc-700">
-                Estudiante de Tecnología Multimedial enfocada en la creación de ecosistemas digitales integrales. Mi trabajo conecta el diseño visual (UX/UI y branding) con el desarrollo front-end, buscando un equilibrio constante entre la estética, la funcionalidad técnica y los objetivos de negocio."
+                Estudiante de Tecnología Multimedial enfocada en la creación de ecosistemas digitales integrales. Mi trabajo conecta el diseño visual (UX/UI y branding) con el desarrollo front-end, buscando un equilibrio constante entre la estética, la funcionalidad y los objetivos de negocio
               </p>
             </motion.div>
           </div>
@@ -142,13 +143,13 @@ export default function App() {
             <div className="bg-white p-4 pb-16 border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] relative z-10">
               <div className="film-grain border-4 border-black aspect-[3/4] overflow-hidden">
                 <img 
-                  src="https://picsum.photos/seed/lola/600/800" 
+                  src={miFoto}
                   alt="Lola" 
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover filter contrast-125 saturate-150"
                 />
               </div>
-              <p className="font-handwriting text-3xl text-center mt-4 text-zinc-900 transform -rotate-2">¡Lista para crear!</p>
+              <p className="font-handwriting text-3xl text-center mt-4 text-zinc-900">¡Lista para crear!</p>
             </div>
             <div className="washi-tape washi-pink w-24 -bottom-4 right-4 z-20 -rotate-12"></div>
           </motion.div>
