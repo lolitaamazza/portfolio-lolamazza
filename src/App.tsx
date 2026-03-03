@@ -769,7 +769,7 @@ export default function App() {
               <Mail className="w-6 h-6" /> Email
             </a>
             <a
-              href="https://www.linkedin.com/in/lola-mazza-oliver-75166729b/"
+               href="https://www.linkedin.com/in/lola-mazza-oliver-75166729b"
               target="_blank"
               rel="noopener noreferrer"
               className="sticker flex items-center justify-center gap-3 bg-blue-500 text-white px-8 py-4 font-display text-2xl uppercase tracking-wider transition-all duration-300 hover:scale-105 hover:bg-black hover:text-white"
