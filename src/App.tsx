@@ -70,7 +70,7 @@ export default function App() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-56 md:pt-48 pb-32 md:pb-32 px-6 max-w-7xl mx-auto relative z-20 mb-24 md:mb-0">
+      <section className="pt-72 md:pt-48 pb-32 px-6 max-w-7xl mx-auto relative z-20 mb-24 md:mb-0">
 
         <div className="w-full relative h-full flex flex-col justify-center mt-48 md:mt-0">
 
@@ -155,12 +155,7 @@ export default function App() {
             </div>
 
             {/* Right: Polaroid */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8, rotate: 10 }}
-              animate={{ opacity: 1, scale: 1, rotate: 4 }}
-              transition={{ delay: 0.5, type: "spring" }}
-              className="relative w-full max-w-sm md:max-w-md mt-24 md:mt-0 mb-16 md:mb-0 mx-auto z-40"
-            >
+           <motion.div className="relative w-full max-w-[320px] md:max-w-md mt-32 md:mt-0 mb-32 md:mb-0 mx-auto z-40">
               {/* Binder Clip */}
               <div className="absolute -top-6 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center drop-shadow-[0_4px_6px_rgba(0,0,0,0.5)] pointer-events-none">
                 {/* Wire handles */}
@@ -177,7 +172,7 @@ export default function App() {
                 </div>
               </div>
               <div className="washi-tape washi-yellow w-40 -top-4 left-1/2 -translate-x-1/2 z-20 rotate-2"></div>
-              <div className="bg-white p-4 pb-16 border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] relative z-10">
+              <div className="bg-white p-4 pb-12 border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] relative z-10">
                 <div className="film-grain border-4 border-black aspect-[3/4] overflow-hidden">
                   <img
                     src={miFoto}
@@ -196,7 +191,7 @@ export default function App() {
       </section>
 
       {/* Marquee Banner */}
-      <div className="w-full overflow-hidden bg-black text-white py-3 border-y-4 border-black z-10 relative">
+      <div className="w-full overflow-hidden bg-black text-white py-3 border-y-4 border-black z-50 relative mt-20">
         <div className="marquee-track flex items-center whitespace-nowrap font-display text-2xl uppercase tracking-wider w-max">
           <span className="mx-4">Diseño Multimedial</span> <Star className="inline w-6 h-6 text-yellow-400 fill-yellow-400 mx-4" />
           <span className="mx-4">Desarrollo Frontend</span> <Star className="inline w-6 h-6 text-pink-500 fill-pink-500 mx-4" />
