@@ -58,7 +58,7 @@ export default function App() {
         <motion.div 
           initial={{ y: -100, rotate: 0 }}
           animate={{ y: 0, rotate: 0 }}
-          className="sticker px-8 py-3 flex gap-8 items-center bg-white"
+          className="sticker px-6 md:px-8 py-3 flex justify-between md:justify-center gap-4 md:gap-8 items-center bg-white/80 backdrop-blur-md md:bg-white md:backdrop-blur-none"
         >
           <span className="font-display text-3xl tracking-wider text-pink-500">LOLA.</span>
           <div className="flex gap-6 font-bold uppercase text-sm tracking-widest">
@@ -70,9 +70,9 @@ export default function App() {
       </nav>
 
       {/* Hero Section */}
-       <section className="py-32 px-6 max-w-7xl mx-auto relative overflow-hidden">
+       <section className="pt-48 pb-40 md:py-32 px-6 max-w-7xl mx-auto relative overflow-hidden">
         
-        <div className="w-full relative h-full flex flex-col justify-center">
+        <div className="w-full relative h-full flex flex-col justify-center mt-8 md:mt-0">
         
 {/* Background Doodles for Hero Section */}
         <SparkleFour className="absolute top-1/4 left-10 z-0 opacity-80" color="#FF1493" />
@@ -92,7 +92,7 @@ export default function App() {
         <motion.div 
             animate={{ y: [0, 20, 0], rotate: [-15, -10, -15] }} 
             transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
-            className="absolute bottom-1/4 right-5 md:right-20 circular-sticker w-36 h-36 p-4 bg-pink-500 text-white font-handwriting font-bold text-2xl z-20 flex items-center justify-center"
+            className="absolute bottom-10 right-5 md:bottom-1/4 md:right-20 circular-sticker w-36 h-36 p-4 bg-pink-500 text-white font-handwriting font-bold text-2xl z-20 flex items-center justify-center"
           >
             <div className="transform rotate-12 text-center">100%<br/>Creativa</div>
           </motion.div>
@@ -118,7 +118,7 @@ export default function App() {
         <Zap className="absolute top-1/3 right-1/3 w-16 h-16 text-purple-500 fill-purple-500 opacity-50 -rotate-12" />
         <Star className="absolute bottom-1/3 left-1/4 w-12 h-12 text-yellow-500 fill-yellow-500 opacity-50 rotate-45" />
 
-        <div className="flex flex-col md:flex-row items-center justify-between gap-12 z-10 w-full">
+         <div className="flex flex-col md:flex-row items-center justify-between gap-16 md:gap-12 z-10 w-full">
           
           {/* Left: Text & Title */}
           <div className="flex-1 relative">
