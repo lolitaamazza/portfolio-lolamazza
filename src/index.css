@@ -133,3 +133,21 @@ body {
   pointer-events: none;
   mix-blend-mode: overlay;
 }
+
+/* Background Dots */
+.bg-dots {
+  background-image: radial-gradient(#cbd5e1 2px, transparent 2px);
+  background-size: 24px 24px;
+}
+
+/* Marquee Animation */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}

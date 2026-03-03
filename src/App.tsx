@@ -1,6 +1,8 @@
 import { motion } from 'motion/react';
 import { ArrowRight, Github, Linkedin, Mail, Star, Zap, Figma, PenTool, Video, MonitorPlay, Layers, Heart, Scissors } from 'lucide-react';
 import miFoto from './images/fotoperfil.jpeg';
+import { SparkleFour, SparkleFive, ImperfectCircle, CrossDoodle, AsteriskDoodle, ThreadLine, LoopScribble } from './components/Doodles';
+
 
 const PORTFOLIO_LETTERS = ['P', 'O', 'R', 'T', 'F', 'O', 'L', 'I', 'O'];
 
@@ -68,8 +70,17 @@ export default function App() {
       </nav>
 
       {/* Hero Section */}
-      <section className="min-h-screen flex flex-col justify-center relative px-6 pt-32 max-w-7xl mx-auto">
+      <section className="min-h-screen flex flex-col justify-center relative px-6 pt-32 pb-20 max-w-7xl mx-auto bg-dots">
         
+{/* Background Doodles for Hero Section */}
+        <SparkleFour className="absolute top-1/4 left-10 z-0 opacity-80" color="#FF1493" />
+        <LoopScribble className="absolute bottom-1/4 left-1/4 z-0 opacity-60" color="#00FF00" />
+        <CrossDoodle className="absolute top-1/3 right-1/4 z-0 opacity-80" color="#FF8C00" />
+        <AsteriskDoodle className="absolute bottom-1/3 right-10 z-0 opacity-70" color="#00BFFF" />
+         <ImperfectCircle className="absolute top-1/4 right-10 z-0 opacity-40 scale-150" color="#CCFF00" />
+        <ThreadLine className="absolute top-1/2 left-1/3 z-0 opacity-60 rotate-12" color="#FF1493" />
+
+
         {/* Decorative Elements */}
         <motion.div 
           animate={{ y: [0, 20, 0], rotate: [-15, -10, -15] }} 
@@ -79,23 +90,41 @@ export default function App() {
           <div className="transform rotate-12">100%<br/>Creativa</div>
         </motion.div>
 
+{/* Floating Badges */}
+        <motion.div 
+          animate={{ y: [0, -15, 0], rotate: [5, 10, 5] }} 
+          transition={{ repeat: Infinity, duration: 4, ease: "easeInOut", delay: 1 }}
+          className="absolute top-1/4 left-1/3 sticker px-4 py-2 bg-yellow-400 font-bold text-lg z-20"
+        >
+          UX/UI
+        </motion.div>
+        
+        <motion.div 
+          animate={{ y: [0, 15, 0], rotate: [-5, -10, -5] }} 
+          transition={{ repeat: Infinity, duration: 6, ease: "easeInOut", delay: 2 }}
+           className="absolute bottom-32 left-10 sticker px-4 py-2 bg-[#00FF00] font-bold text-lg z-20"
+        >
+          Creative Dev
+        </motion.div>
+
         <Zap className="absolute top-1/3 right-1/3 w-16 h-16 text-purple-500 fill-purple-500 opacity-50 -rotate-12" />
         <Star className="absolute bottom-1/3 left-1/4 w-12 h-12 text-yellow-500 fill-yellow-500 opacity-50 rotate-45" />
 
-        <div className="flex flex-col md:flex-row items-center justify-between gap-12 z-10">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-12 z-10 w-full">
           
           {/* Left: Text & Title */}
           <div className="flex-1 relative">
             {/* PORTFOLIO Title */}
-            <div className="flex flex-wrap justify-center md:justify-start mb-8">
+            <div className="flex flex-wrap justify-center md:justify-start mb-8 relative">
+               <ThreadLine className="absolute -top-10 -left-10 z-0 opacity-70 -rotate-45" color="#00BFFF" />
               {PORTFOLIO_LETTERS.map((letter, i) => (
                 <motion.span
                   key={i}
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.1, type: "spring" }}
-                  className={`font-display text-[15vw] md:text-[8rem] leading-none text-zinc-900 ${i % 2 === 0 ? 'rotate-3' : '-rotate-6'} ${i % 3 === 0 ? 'text-pink-500' : ''}`}
-                  style={{ display: 'inline-block' }}
+                  className={`font-display text-[18vw] md:text-[9rem] leading-none text-zinc-900 ${i % 2 === 0 ? 'rotate-3' : '-rotate-6'} ${i % 3 === 0 ? 'text-pink-500' : ''}`}
+                  style={{ display: 'inline-block', textShadow: '4px 4px 0px rgba(0,0,0,0.1)' }}
                 >
                   {letter}
                 </motion.span>
@@ -153,25 +182,49 @@ export default function App() {
             </div>
             <div className="washi-tape washi-pink w-24 -bottom-4 right-4 z-20 -rotate-12"></div>
           </motion.div>
+ </div>
 
+        {/* Marquee Banner */}
+        <div className="absolute -bottom-6 left-0 w-full overflow-hidden bg-black text-white py-3 border-y-4 border-black z-30 transform rotate-1">
+          <div className="marquee-track font-display text-2xl uppercase tracking-wider">
+            <span className="mx-4">Diseño Multimedial</span> <Star className="inline w-6 h-6 text-yellow-400 fill-yellow-400 mx-4" />
+            <span className="mx-4">Desarrollo Frontend</span> <Star className="inline w-6 h-6 text-pink-500 fill-pink-500 mx-4" />
+            <span className="mx-4">Identidad Visual</span> <Star className="inline w-6 h-6 text-blue-400 fill-blue-400 mx-4" />
+            <span className="mx-4">Experiencias Interactivas</span> <Star className="inline w-6 h-6 text-green-400 fill-green-400 mx-4" />
+            <span className="mx-4">Diseño Multimedial</span> <Star className="inline w-6 h-6 text-yellow-400 fill-yellow-400 mx-4" />
+            <span className="mx-4">Desarrollo Frontend</span> <Star className="inline w-6 h-6 text-pink-500 fill-pink-500 mx-4" />
+            <span className="mx-4">Identidad Visual</span> <Star className="inline w-6 h-6 text-blue-400 fill-blue-400 mx-4" />
+            <span className="mx-4">Experiencias Interactivas</span> <Star className="inline w-6 h-6 text-green-400 fill-green-400 mx-4" />
+          </div>
         </div>
       </section>
 
       {/* Bio & Skills Section */}
       <section id="bio" className="py-32 px-6 max-w-7xl mx-auto relative">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 relative">
+          
+          {/* Background Doodles for Bio Section */}
+         <LoopScribble className="absolute -left-10 top-20 z-0 opacity-80" color="#FF1493" />
+          <SparkleFour className="absolute right-1/4 top-10 z-0 opacity-80" color="#00FF00" />
+          <ImperfectCircle className="absolute left-1/3 top-1/4 z-0 opacity-60" color="#FF1493" />
+          <CrossDoodle className="absolute right-10 top-1/3 z-0 opacity-80" color="#00BFFF" />
+          <AsteriskDoodle className="absolute left-10 bottom-1/4 z-0 opacity-80" color="#FF8C00" />
+          <SparkleFive className="absolute right-1/3 bottom-10 z-0 opacity-80" color="#FF1493" />
           
           {/* Education & Experience */}
-          <div className="md:col-span-7 space-y-16">
-            <div>
-              <h3 className="font-display text-5xl mb-8 uppercase tracking-wide">
+          <div className="md:col-span-7 space-y-16 relative z-10">
+            <div className="relative">
+              <ThreadLine className="absolute -top-6 -left-10 z-0 opacity-70" color="#00FF00" />
+              <h3 className="font-display text-5xl mb-8 uppercase tracking-wide relative z-10">
                 <span className="highlighter-yellow">Educación</span>
               </h3>
-              <div className="space-y-8">
+              <div className="space-y-8 relative">
+                <LoopScribble className="absolute -right-12 top-1/2 z-0 opacity-60" color="#00BFFF" />
                 {/* Block 1 */}
                 <div className="irregular-border bg-white p-6 relative">
                   <div className="washi-tape washi-pink w-16 -top-3 -left-4 rotate-45"></div>
                   <div className="washi-tape washi-pink w-16 -bottom-3 -right-4 rotate-45"></div>
+                  
                   
                   {/* Overlapping sticker pin (Figma) */}
                   <div className="absolute -right-6 top-1/2 -translate-y-1/2 circular-sticker w-12 h-12 bg-[#baffc9] text-black z-10 rotate-12">
@@ -198,13 +251,16 @@ export default function App() {
               </div>
             </div>
 
-            <div>
-              <h3 className="font-display text-5xl mb-8 uppercase tracking-wide">
+            <div className="relative">
+               <ThreadLine className="absolute -left-16 top-10 z-0 opacity-70 rotate-90" color="#FF1493" />
+              <h3 className="font-display text-5xl mb-8 uppercase tracking-wide relative z-10">
                 <span className="highlighter-pink">Experiencia</span>
               </h3>
-              <div className="irregular-border bg-white p-6 relative rotate-1">
+              <div className="irregular-border bg-white p-6 relative rotate-1 z-10">
                 <div className="washi-tape washi-pink w-24 -top-4 right-10 -rotate-6"></div>
                 <div className="washi-tape washi-pink w-16 -bottom-3 -left-4 rotate-45"></div>
+                
+              
                 
                 {/* Overlapping sticker pin (Illustrator) */}
                 <div className="absolute -right-5 -top-5 circular-sticker w-14 h-14 bg-[#ffdfba] text-black z-10 rotate-6">
@@ -222,8 +278,9 @@ export default function App() {
             </div>
 
             {/* Idiomas */}
-            <div>
-              <h3 className="font-display text-5xl mb-8 uppercase tracking-wide">
+            <div className="relative">
+              <AsteriskDoodle className="absolute -right-8 -top-4 z-0 opacity-70" color="#00BFFF" />
+              <h3 className="font-display text-5xl mb-8 uppercase tracking-wide relative z-10">
                 <span className="highlighter-yellow">Idiomas</span>
               </h3>
               <div className="flex flex-wrap gap-4">
@@ -234,9 +291,10 @@ export default function App() {
           </div>
 
           {/* Software & Skills */}
-          <div className="md:col-span-5 space-y-16">
-                      <div className="bg-white border-4 border-black rounded-2xl shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-8 rotate-2 relative">
-              <h3 className="font-display text-4xl mb-8 uppercase text-zinc-900">Software</h3>
+           <div className="md:col-span-5 space-y-16 relative z-10">
+            <div className="bg-white border-4 border-black rounded-2xl shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-8 rotate-2 relative">
+              <ThreadLine className="absolute -top-8 -right-10 z-0 opacity-70" color="#FF1493" />
+              <h3 className="font-display text-4xl mb-8 uppercase text-zinc-900 relative z-10">Software</h3>
               <div className="space-y-6">
                 {SKILLS.map((skill, index) => (
                   <div 
@@ -272,7 +330,7 @@ export default function App() {
               </h3>
               
               <div className="flex flex-wrap gap-3">
-                {['UX/UI Design', 'Branding', 'Edición de Video', 'Motion Graphics', 'Social Media Content'].map((skill) => (
+                {['UX/UI Design', 'Branding', 'Edición de Video', 'Motion Graphics', 'Social Media Content, Packaging'].map((skill) => (
                   <span 
                     key={skill}
                      className="px-4 py-2 rounded-full border-2 border-black bg-white font-sans text-zinc-900 text-sm font-bold hover:bg-zinc-100 hover:-translate-y-0.5 hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all cursor-pointer"
@@ -288,11 +346,18 @@ export default function App() {
       </section>
 
       {/* Project Gallery */}
-      <section id="work" className="py-32 bg-blue-600 border-y-8 border-black relative">
+     <section id="work" className="py-32 bg-blue-600 border-y-8 border-black relative overflow-hidden">
+        {/* Background Doodles for Work Section */}
+        <ImperfectCircle className="absolute top-20 right-20 z-0 opacity-50" color="#CCFF00" />
+        <SparkleFive className="absolute bottom-40 left-10 z-0 opacity-50" color="#FF1493" />
+         <ThreadLine className="absolute top-40 left-20 z-0 opacity-50 -rotate-45" color="#00BFFF" />
+        <AsteriskDoodle className="absolute top-1/2 right-10 z-0 opacity-50" color="#FF8C00" />
+        <CrossDoodle className="absolute bottom-20 right-1/3 z-0 opacity-50" color="#00FF00" />
+
         <div className="washi-tape washi-yellow w-full h-8 top-0 left-0 z-10 opacity-50"></div>
         <div className="washi-tape washi-pink w-full h-8 bottom-0 left-0 z-10 opacity-50"></div>
         
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
           <motion.h2 
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -351,6 +416,12 @@ export default function App() {
 
       {/* Contact Section */}
       <section id="contact" className="py-32 px-6 max-w-4xl mx-auto text-center relative mt-20">
+        {/* Background Doodles for Contact Section */}
+        <LoopScribble className="absolute top-10 right-10 md:-right-20 z-0 opacity-60" color="#00BFFF" />
+        <SparkleFour className="absolute bottom-20 left-0 md:-left-20 z-0 opacity-80" color="#00FF00" />
+        <CrossDoodle className="absolute top-1/2 -left-10 z-0 opacity-80" color="#FF1493" />
+        <AsteriskDoodle className="absolute bottom-10 right-10 z-0 opacity-80" color="#FF8C00" />
+
         <div className="washi-tape washi-lavender w-64 -top-6 left-1/2 -translate-x-1/2 z-0 rotate-2"></div>
         
         <div className="irregular-border bg-white p-12 md:p-20 shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] relative z-10 rotate-1">
