@@ -149,7 +149,7 @@ export default function App() {
                   className="w-full h-full object-cover filter saturate-150"
                 />
               </div>
-                <p className="font-handwriting font-bold text-3xl text-center mt-4 text-zinc-900 transform -rotate-2">¡Lista para crear!</p>
+                <p className="font-handwriting font-bold text-3xl text-center mt-4 text-zinc-900">¡Lista para crear!</p>
             </div>
             <div className="washi-tape washi-pink w-24 -bottom-4 right-4 z-20 -rotate-12"></div>
           </motion.div>
@@ -212,7 +212,7 @@ export default function App() {
                 </div>
 
                 <h4 className="font-bold text-2xl mb-1">Diseñadora Freelance</h4>
-                <p className="font-serif text-zinc-600 mb-4">Independiente • 2023 - Presente</p>
+                <p className="font-serif text-zinc-600 mb-4">Independiente • 2024 - Presente</p>
                 <ul className="font-serif text-zinc-700 list-disc list-inside space-y-2">
                   <li>Creación de identidades visuales y sistemas de diseño enfocados en la coherencia de marca en múltiples plataformas digitales</li>
                   <li>Desarrollo de prototipos interactivos y maquetación responsive, asegurando la accesibilidad y funcionalidad en diversos dispositivos</li>
@@ -272,7 +272,7 @@ export default function App() {
               </h3>
               
               <div className="flex flex-wrap gap-3">
-                {['Layout Design', 'Branding', 'UI Design', 'Photo Manipulation', 'Basic Video Edit', 'Motion Graphics'].map((skill) => (
+                {['UX/UI Design', 'Branding', 'Edición de Video', 'Motion Graphics', 'Social Media Content'].map((skill) => (
                   <span 
                     key={skill}
                      className="px-4 py-2 rounded-full border-2 border-black bg-white font-sans text-zinc-900 text-sm font-bold hover:bg-zinc-100 hover:-translate-y-0.5 hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all cursor-pointer"
