@@ -74,7 +74,7 @@ export default function App() {
         <motion.div 
           animate={{ y: [0, 20, 0], rotate: [-15, -10, -15] }} 
           transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
-          className="absolute bottom-1/4 right-5 md:right-20 circular-sticker w-28 h-28 bg-pink-500 text-white font-handwriting text-2xl z-20"
+          className="absolute bottom-1/4 right-5 md:right-20 circular-sticker w-28 h-28 bg-pink-500 text-white font-handwriting font-bold text-2xl z-20"
         >
           <div className="transform rotate-12">100%<br/>Creativa</div>
         </motion.div>
@@ -146,10 +146,10 @@ export default function App() {
                   src={miFoto}
                   alt="Lola" 
                   referrerPolicy="no-referrer"
-                  className="w-full h-full object-cover filter contrast-15 saturate-150"
+                  className="w-full h-full object-cover filter saturate-150"
                 />
               </div>
-              <p className="font-handwriting text-3xl text-center mt-4 text-zinc-900">¡Lista para crear!</p>
+                <p className="font-handwriting font-bold text-3xl text-center mt-4 text-zinc-900 transform -rotate-2">¡Lista para crear!</p>
             </div>
             <div className="washi-tape washi-pink w-24 -bottom-4 right-4 z-20 -rotate-12"></div>
           </motion.div>
@@ -180,7 +180,7 @@ export default function App() {
 
                   <h4 className="font-bold text-2xl mb-1">Licenciatura en Tecnología Multimedia</h4>
                   <p className="font-serif text-zinc-600 mb-2">Universidad Creativa • 2024 - Presente</p>
-                  <p className="font-handwriting text-2xl text-pink-500 mt-2 leading-tight">¡Próximamente Técnica en Comunicación Interactiva y Diseño Multimedial!</p>
+                                    <p className="font-handwriting font-bold text-2xl text-pink-500 mt-2 leading-tight">¡Próximamente Técnica en Comunicación Interactiva y Diseño Multimedial!</p>
                 </div>
                 
                 {/* Block 2 */}
@@ -304,13 +304,16 @@ export default function App() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
             {PROJECTS.map((project, index) => (
-              <motion.div
+              <motion.a
+                href="https://www.behance.net/lolamazzaoliver"
+                target="_blank"
+                rel="noopener noreferrer"
                 key={project.id}
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ delay: index * 0.1, type: "spring", stiffness: 100 }}
-                className={`relative group cursor-pointer ${project.rotation} hover:rotate-0 transition-transform duration-300`}
+                className={`block relative group cursor-pointer ${project.rotation} hover:rotate-0 transition-transform duration-300`}
               >
                 {/* Large Outline Number */}
                 <div className="absolute -top-12 -left-8 font-display text-9xl text-outline z-30 opacity-80 group-hover:scale-110 transition-transform duration-300 pointer-events-none">
@@ -333,14 +336,14 @@ export default function App() {
                   <div className="flex justify-between items-end px-2">
                     <div>
                       <h3 className="text-4xl font-display uppercase tracking-wide mb-1">{project.title}</h3>
-                      <p className="text-2xl font-handwriting text-zinc-600">{project.category}</p>
+                      <p className="text-2xl font-handwriting font-bold text-zinc-600">{project.category}</p>
                     </div>
                     <div className={`circular-sticker w-14 h-14 ${project.color} text-black group-hover:scale-110 transition-transform`}>
                       <ArrowRight className="w-8 h-8 -rotate-45" />
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </motion.a>
             ))}
           </div>
         </div>
@@ -360,35 +363,33 @@ export default function App() {
             ¡Hagamos <br/><span className="highlighter-neon">Ruido!</span>
           </motion.h2>
           
-          <p className="text-4xl font-handwriting text-zinc-700 mb-12">
+          <p className="text-4xl font-handwriting font-bold text-zinc-700 mb-12">
             ¿Tenés una idea loca? ¡Escribime! <Heart className="inline text-pink-500 fill-pink-500" />
           </p>
 
           <div className="flex flex-wrap justify-center gap-6">
-            <motion.a 
-              whileHover={{ scale: 1.1, rotate: -5 }}
-              whileTap={{ scale: 0.95 }}
+             <a 
               href="mailto:hola@ejemplo.com"
-              className="sticker flex items-center gap-3 bg-yellow-400 text-zinc-900 px-8 py-4 font-display text-2xl uppercase tracking-wider"
+              className="sticker flex items-center gap-3 bg-yellow-400 text-zinc-900 px-8 py-4 font-display text-2xl uppercase tracking-wider transition-all duration-300 hover:scale-105 hover:bg-black hover:text-white"
             >
               <Mail className="w-6 h-6" /> Email
-            </motion.a>
-            <motion.a 
-              whileHover={{ scale: 1.1, rotate: 5 }}
-              whileTap={{ scale: 0.95 }}
+            </a>
+            <a 
               href="#"
-              className="sticker flex items-center gap-3 bg-purple-400 text-zinc-900 px-8 py-4 font-display text-2xl uppercase tracking-wider"
+              className="sticker flex items-center gap-3 bg-blue-500 text-white px-8 py-4 font-display text-2xl uppercase tracking-wider transition-all duration-300 hover:scale-105 hover:bg-black hover:text-white"
             >
               <Linkedin className="w-6 h-6" /> LinkedIn
-            </motion.a>
-            <motion.a 
-              whileHover={{ scale: 1.1, rotate: -5 }}
-              whileTap={{ scale: 0.95 }}
-              href="#"
-              className="sticker flex items-center gap-3 bg-pink-500 text-white px-8 py-4 font-display text-2xl uppercase tracking-wider"
+            </a>
+            <a 
+              href="https://www.behance.net/lolamazzaoliver"
+              target="_blank"
+              rel="noopener noreferrer"
+              classame="sticker flex items-center gap-3 bg-pink-500 text-white px-8 py-4 font-display text-2xl uppercase tracking-wider transition-all duration-300 hover:scale-105 hover:bg-black hover:text-white"
             >
-              <Github className="w-6 h-6" /> Behance
-            </motion.a>
+              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M22 7h-7v2h7V7zM11.4 10.33c0-1.4-.94-2.26-2.56-2.26H0v10h4.2c1.85 0 3.18-.88 3.18-2.5 0-1.1-.7-1.87-1.74-2.16 1.14-.3 1.76-1.12 1.76-2.08zM2.8 10.04h1.3c.57 0 .98.32.98.83 0 .52-.4.83-.98.83H2.8v-1.66zm1.55 5.86H2.8v-1.85h1.55c.67 0 1.13.37 1.13.93 0 .57-.46.92-1.13.92zM15.87 9.3c-3.93 0-6.6 2.7-6.6 6.58 0 3.84 2.52 6.44 6.65 6.44 2.97 0 5.26-1.24 6.03-4.1h-2.97c-.35 1.03-1.49 1.64-2.97 1.64-1.64 0-3.17-1.08-3.37-2.97h9.35c.05-.2.05-.57.05-.78v-.52c-.15-2.86-2.52-5.3-6.14-5.3zm-3.07 4.5c.26-1.53 1.59-2.55 3.07-2.55 1.49 0 2.82 1.02 3.07 2.55h-6.14z"/>
+              </svg> Behance
+            </a>
           </div>
         </div>
       </section>
