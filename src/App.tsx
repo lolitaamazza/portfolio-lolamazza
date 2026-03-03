@@ -70,7 +70,7 @@ export default function App() {
       </nav>
 
       {/* Hero Section */}
-       <section className="py-32 px-6 max-w-7xl mx-auto relative bg-dots overflow-hidden">
+       <section className="py-32 px-6 max-w-7xl mx-auto relative overflow-hidden">
         
         <div className="w-full relative h-full flex flex-col justify-center">
         
@@ -81,16 +81,22 @@ export default function App() {
         <AsteriskDoodle className="absolute bottom-1/3 right-10 z-0 opacity-70" color="#00BFFF" />
          <ImperfectCircle className="absolute top-1/4 right-10 z-0 opacity-40 scale-150" color="#CCFF00" />
         <ThreadLine className="absolute top-1/2 left-1/3 z-0 opacity-60 rotate-12" color="#FF1493" />
+ {/* Additional Doodles */}
+          <SparkleFive className="absolute top-10 right-1/3 z-0 opacity-70" color="#FF1493" />
+          <CrossDoodle className="absolute bottom-10 left-10 z-0 opacity-60 scale-75" color="#00BFFF" />
+          <LoopScribble className="absolute top-1/2 right-5 z-0 opacity-50 rotate-45" color="#FF8C00" />
+          <AsteriskDoodle className="absolute top-20 left-1/3 z-0 opacity-80" color="#00FF00" />
 
 
         {/* Decorative Elements */}
         <motion.div 
-          animate={{ y: [0, 20, 0], rotate: [-15, -10, -15] }} 
-          transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
-          className="absolute bottom-1/4 right-5 md:right-20 circular-sticker w-28 h-28 bg-pink-500 text-white font-handwriting font-bold text-2xl z-20"
-        >
-          <div className="transform rotate-12">100%<br/>Creativa</div>
-        </motion.div>
+            animate={{ y: [0, 20, 0], rotate: [-15, -10, -15] }} 
+            transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
+            className="absolute bottom-1/4 right-5 md:right-20 circular-sticker w-36 h-36 p-4 bg-pink-500 text-white font-handwriting font-bold text-2xl z-20 flex items-center justify-center"
+          >
+            <div className="transform rotate-12 text-center">100%<br/>Creativa</div>
+          </motion.div>
+        
 
 {/* Floating Badges */}
         <motion.div 
@@ -184,7 +190,7 @@ export default function App() {
             </div>
             <div className="washi-tape washi-pink w-24 -bottom-4 right-4 z-20 -rotate-12"></div>
           </motion.div>
-          
+
  </div>
  </div>
     </section>
@@ -452,14 +458,16 @@ export default function App() {
 
           <div className="flex flex-wrap justify-center gap-6">
              <a 
-              href="mailto:hola@ejemplo.com"
-              className="sticker flex items-center gap-3 bg-yellow-400 text-zinc-900 px-8 py-4 font-display text-2xl uppercase tracking-wider transition-all duration-300 hover:scale-105 hover:bg-black hover:text-white"
+              href="mailto:lolamazzaoliver@gmail.com"
+              className="sticker flex items-center justify-center gap-3 bg-yellow-400 text-zinc-900 px-8 py-4 font-display text-2xl uppercase tracking-wider transition-all duration-300 hover:scale-105 hover:bg-black hover:text-white"
             >
               <Mail className="w-6 h-6" /> Email
             </a>
             <a 
-              href="#"
-              className="sticker flex items-center gap-3 bg-blue-500 text-white px-8 py-4 font-display text-2xl uppercase tracking-wider transition-all duration-300 hover:scale-105 hover:bg-black hover:text-white"
+              href="https://www.linkedin.com/in/lolamazzaoliver"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="sticker flex items-center justify-center gap-3 bg-blue-500 text-white px-8 py-4 font-display text-2xl uppercase tracking-wider transition-all duration-300 hover:scale-105 hover:bg-black hover:text-white"
             >
               <Linkedin className="w-6 h-6" /> LinkedIn
             </a>
@@ -467,9 +475,9 @@ export default function App() {
               href="https://www.behance.net/lolamazzaoliver"
               target="_blank"
               rel="noopener noreferrer"
-              classame="sticker flex items-center gap-3 bg-pink-500 text-white px-8 py-4 font-display text-2xl uppercase tracking-wider transition-all duration-300 hover:scale-105 hover:bg-black hover:text-white"
+              className="sticker flex items-center justify-center gap-3 bg-pink-500 text-white px-8 py-4 font-display text-2xl uppercase tracking-wider transition-all duration-300 hover:scale-105 hover:bg-black hover:text-white"
             >
-              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+              <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path d="M22 7h-7v2h7V7zM11.4 10.33c0-1.4-.94-2.26-2.56-2.26H0v10h4.2c1.85 0 3.18-.88 3.18-2.5 0-1.1-.7-1.87-1.74-2.16 1.14-.3 1.76-1.12 1.76-2.08zM2.8 10.04h1.3c.57 0 .98.32.98.83 0 .52-.4.83-.98.83H2.8v-1.66zm1.55 5.86H2.8v-1.85h1.55c.67 0 1.13.37 1.13.93 0 .57-.46.92-1.13.92zM15.87 9.3c-3.93 0-6.6 2.7-6.6 6.58 0 3.84 2.52 6.44 6.65 6.44 2.97 0 5.26-1.24 6.03-4.1h-2.97c-.35 1.03-1.49 1.64-2.97 1.64-1.64 0-3.17-1.08-3.37-2.97h9.35c.05-.2.05-.57.05-.78v-.52c-.15-2.86-2.52-5.3-6.14-5.3zm-3.07 4.5c.26-1.53 1.59-2.55 3.07-2.55 1.49 0 2.82 1.02 3.07 2.55h-6.14z"/>
               </svg> Behance
             </a>
