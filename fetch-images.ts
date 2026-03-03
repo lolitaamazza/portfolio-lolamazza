@@ -22,3 +22,4 @@ function fetchOgImage(url: string) {
 fetchOgImage('https://www.behance.net/gallery/233407769/UXUI-Case-Study-University-Totem-for-Campus');
 fetchOgImage('https://www.behance.net/gallery/231720993/Modern-Furniture-Minimalist-E-commerce-Web-Design');
 fetchOgImage('https://www.behance.net/gallery/223685651/Natura-Redesign');
+fetchOgImage('https://www.behance.net/gallery/245150941/Umami-Brand-Identity-A-Sustainable-Fast-Food-Concept');

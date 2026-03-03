@@ -79,7 +79,7 @@ const PROJECTS = [
     category: 'Web Design',
     color: "bg-green-400",
     rotation: "rotate-3",
-   image: 'https://mir-s3-cdn-cf.behance.net/projects/max_808/738db7231720993.Y3JvcCwxNDQwLDExMjYsMCwxNjM2.png',
+   image: 'https://mir-s3-cdn-cf.behance.net/projects/max_808/6fb51f231720993.Y3JvcCw5MzUsNzMyLDI1MCww.png',
     link: 'https://www.behance.net/gallery/231720993/Modern-Furniture-Minimalist-E-commerce-Web-Design',
   },
   {
@@ -88,17 +88,17 @@ const PROJECTS = [
     category: 'Branding / UI',
     color: 'bg-blue-400',
     rotation: '-rotate-2',
-    image: 'https://mir-s3-cdn-cf.behance.net/project_modules/hd/793e2c223685651.67fd7c2b071da.png',
+     image: 'https://mir-s3-cdn-cf.behance.net/projects/max_808/16f577223685651.68a5043ec905d.jpg',
+   
     link: 'https://www.behance.net/gallery/223685651/Natura-Redesign',
   },
   {
-    id: 6,
-    title: 'Más Proyectos',
-    category: 'Behance Profile',
+   title: 'Umami Brand Identity',
+    category: 'Branding',
     color: 'bg-orange-400',
     rotation: 'rotate-1',
-    image: 'https://picsum.photos/seed/moreprojects/800/600',
-    link: 'https://www.behance.net/lolamazzaoliver',
+    image: 'https://mir-s3-cdn-cf.behance.net/project_modules/1400/0d0e90245150941.69a74936a14b8.jpg',
+    link: 'https://www.behance.net/gallery/245150941/Umami-Brand-Identity-A-Sustainable-Fast-Food-Concept',
   },
 ];
 
@@ -605,7 +605,8 @@ export default function App() {
                   "Branding",
                   "Edición de Video",
                   "Motion Graphics",
-                  "Social Media Content, Packaging",
+                  "Social Media Content",
+                  "Packaging",
                 ].map((skill) => (
                   <span
                     key={skill}
