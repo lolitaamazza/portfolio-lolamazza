@@ -70,9 +70,9 @@ export default function App() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-32 md:pt-48 pb-24 md:pb-32 px-6 max-w-7xl mx-auto relative mb-12 md:mb-0">
+      <section className="pt-56 md:pt-48 pb-32 md:pb-32 px-6 max-w-7xl mx-auto relative z-20 mb-24 md:mb-0">
 
-        <div className="w-full relative h-full flex flex-col justify-center mt-28 md:mt-0">
+        <div className="w-full relative h-full flex flex-col justify-center mt-48 md:mt-0">
 
           {/* Background Doodles for Hero Section */}
           <SparkleFour className="absolute top-1/4 left-10 z-0 opacity-80" color="#FF1493" />
@@ -144,7 +144,7 @@ export default function App() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1 }}
-                className="sticker bg-white p-8 max-w-xl rotate-1 mt-16 md:mt-0"
+                className="sticker bg-white p-8 max-w-xl rotate-1 mt-32 md:mt-0"
               >
                 <div className="washi-tape washi-lavender w-32 -top-4 left-4 -rotate-3"></div>
                 <h2 className="font-display text-5xl text-pink-500 mb-4 uppercase tracking-wide">Hola, soy Lola</h2>
@@ -159,7 +159,7 @@ export default function App() {
               initial={{ opacity: 0, scale: 0.8, rotate: 10 }}
               animate={{ opacity: 1, scale: 1, rotate: 4 }}
               transition={{ delay: 0.5, type: "spring" }}
-              className="relative w-full max-w-sm md:max-w-md mt-16 md:mt-0 mx-auto"
+              className="relative w-full max-w-sm md:max-w-md mt-24 md:mt-0 mb-16 md:mb-0 mx-auto z-40"
             >
               {/* Binder Clip */}
               <div className="absolute -top-6 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center drop-shadow-[0_4px_6px_rgba(0,0,0,0.5)] pointer-events-none">
@@ -196,7 +196,7 @@ export default function App() {
       </section>
 
       {/* Marquee Banner */}
-      <div className="w-full overflow-hidden bg-black text-white py-3 border-y-4 border-black z-30 relative">
+      <div className="w-full overflow-hidden bg-black text-white py-3 border-y-4 border-black z-10 relative">
         <div className="marquee-track flex items-center whitespace-nowrap font-display text-2xl uppercase tracking-wider w-max">
           <span className="mx-4">Diseño Multimedial</span> <Star className="inline w-6 h-6 text-yellow-400 fill-yellow-400 mx-4" />
           <span className="mx-4">Desarrollo Frontend</span> <Star className="inline w-6 h-6 text-pink-500 fill-pink-500 mx-4" />
@@ -487,3 +487,4 @@ export default function App() {
     </div>
   );
 }
+
