@@ -103,7 +103,7 @@ export default function App() {
         <motion.div 
           animate={{ y: [0, 15, 0], rotate: [-5, -10, -5] }} 
           transition={{ repeat: Infinity, duration: 6, ease: "easeInOut", delay: 2 }}
-           className="absolute bottom-14 left-10 sticker px-4 py-2 bg-[#00FF00] font-bold text-lg z-20"
+          className="absolute bottom-0 left-10 sticker px-4 py-2 bg-[#00FF00] font-bold text-lg z-20"
         >
           Creative Dev
         </motion.div>
@@ -187,7 +187,15 @@ export default function App() {
 
         {/* Marquee Banner */}
         <div className="absolute bottom-0 left-0 w-full overflow-hidden bg-black text-white py-3 border-y-4 border-black z-30">
-          <div className="marquee-track font-display text-2xl uppercase tracking-wider">
+          <div className="marquee-track flex items-center whitespace-nowrap font-display text-2xl uppercase tracking-wider w-max">
+            <span className="mx-4">Diseño Multimedial</span> <Star className="inline w-6 h-6 text-yellow-400 fill-yellow-400 mx-4" />
+            <span className="mx-4">Desarrollo Frontend</span> <Star className="inline w-6 h-6 text-pink-500 fill-pink-500 mx-4" />
+            <span className="mx-4">Identidad Visual</span> <Star className="inline w-6 h-6 text-blue-400 fill-blue-400 mx-4" />
+            <span className="mx-4">Experiencias Interactivas</span> <Star className="inline w-6 h-6 text-green-400 fill-green-400 mx-4" />
+            <span className="mx-4">Diseño Multimedial</span> <Star className="inline w-6 h-6 text-yellow-400 fill-yellow-400 mx-4" />
+            <span className="mx-4">Desarrollo Frontend</span> <Star className="inline w-6 h-6 text-pink-500 fill-pink-500 mx-4" />
+            <span className="mx-4">Identidad Visual</span> <Star className="inline w-6 h-6 text-blue-400 fill-blue-400 mx-4" />
+            <span className="mx-4">Experiencias Interactivas</span> <Star className="inline w-6 h-6 text-green-400 fill-green-400 mx-4" />
             <span className="mx-4">Diseño Multimedial</span> <Star className="inline w-6 h-6 text-yellow-400 fill-yellow-400 mx-4" />
             <span className="mx-4">Desarrollo Frontend</span> <Star className="inline w-6 h-6 text-pink-500 fill-pink-500 mx-4" />
             <span className="mx-4">Identidad Visual</span> <Star className="inline w-6 h-6 text-blue-400 fill-blue-400 mx-4" />
