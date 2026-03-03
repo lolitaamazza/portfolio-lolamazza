@@ -193,7 +193,7 @@ export default function App() {
                   </div>
 
                   <h4 className="font-bold text-2xl mb-1">Hackatones UX/UI</h4>
-                  <p className="font-serif text-zinc-600">Participación en múltiples ediciones</p>
+                  <p className="font-serif text-zinc-600">Integré equipos multidisciplinarios para el desarrollo colaborativo de soluciones digitales bajo plazos estrictos. Mi rol abarcó desde la ejecución de user research y arquitectura de la información hasta el armado de pantallas de alta fidelidad en Figma. El proceso culminó con la defensa técnica de los proyectos ante jurados, donde justifiqué cada decisión estética, funcional y tecnológica de la propuesta</p>
                 </div>
               </div>
             </div>
@@ -387,7 +387,7 @@ export default function App() {
               href="#"
               className="sticker flex items-center gap-3 bg-pink-500 text-white px-8 py-4 font-display text-2xl uppercase tracking-wider"
             >
-              <Behance className="w-6 h-6" /> Behance
+              <Github className="w-6 h-6" /> Behance
             </motion.a>
           </div>
         </div>
