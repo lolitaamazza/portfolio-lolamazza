@@ -204,9 +204,21 @@ export default function App() {
                 </ul>
               </div>
             </div>
+
+            {/* Idiomas */}
+            <div>
+              <h3 className="font-display text-5xl mb-8 uppercase tracking-wide">
+                <span className="highlighter-yellow">Idiomas</span>
+              </h3>
+              <div className="flex flex-wrap gap-4">
+                <span className="sticker px-6 py-2 bg-[#ffb3ba] font-bold text-lg -rotate-2">Español (Nativo)</span>
+                <span className="sticker px-6 py-2 bg-[#baffc9] font-bold text-lg rotate-3">Inglés (Avanzado)</span>
+                <span className="sticker px-6 py-2 bg-[#bae1ff] font-bold text-lg -rotate-1">Portugués (Básico)</span>
+              </div>
+            </div>
           </div>
 
-          {/* Skills & Languages */}
+          {/* Software & Skills */}
           <div className="md:col-span-5 space-y-16">
             <div className="sticker bg-white text-zinc-900 p-8 rotate-2">
               <h3 className="font-display text-4xl mb-8 uppercase text-zinc-900">Software</h3>
@@ -214,18 +226,21 @@ export default function App() {
                 {SKILLS.map((skill, index) => (
                   <div 
                     key={index}
-                    className="group flex items-center gap-4 cursor-pointer"
+                    className="group flex items-center gap-4"
                   >
-                    <div className={`circular-sticker w-14 h-14 shrink-0 ${skill.color} text-black transition-transform group-hover:scale-110 group-hover:rotate-12`}>
+                    <div className={`circular-sticker w-14 h-14 shrink-0 ${skill.color} text-black transition-all duration-300 group-hover:scale-110 group-hover:rotate-12`}>
                       <skill.icon size={24} />
                     </div>
                     <div className="flex-1">
                       <p className="font-sans font-bold text-lg mb-1">{skill.name}</p>
                       <div className="marker-bar-bg">
-                        <div 
+                        <motion.div 
                           className="marker-bar-fill"
-                          style={{ width: skill.level }}
-                        ></div>
+                          initial={{ width: 0 }}
+                          whileInView={{ width: skill.level }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 1, delay: index * 0.1, ease: "easeOut" }}
+                        ></motion.div>
                       </div>
                     </div>
                   </div>
@@ -233,12 +248,23 @@ export default function App() {
               </div>
             </div>
 
-            <div>
-              <h3 className="font-display text-4xl mb-6 uppercase">Idiomas</h3>
-              <div className="flex flex-wrap gap-4">
-                <span className="sticker px-6 py-2 bg-[#ffb3ba] font-bold text-lg -rotate-2">Español (Nativo)</span>
-                <span className="sticker px-6 py-2 bg-[#baffc9] font-bold text-lg rotate-3">Inglés (Avanzado)</span>
-                <span className="sticker px-6 py-2 bg-[#bae1ff] font-bold text-lg -rotate-1">Portugués (Básico)</span>
+            <div className="irregular-border bg-white p-8 relative -rotate-1">
+              <div className="washi-tape washi-pink w-16 -top-3 -left-4 rotate-45"></div>
+              <div className="washi-tape washi-pink w-16 -bottom-3 -right-4 rotate-45"></div>
+              
+              <h3 className="font-display text-4xl mb-6 uppercase">
+                <span className="highlighter-neon">Skills</span>
+              </h3>
+              
+              <div className="flex flex-wrap gap-3">
+                {['Layout Design', 'Branding', 'UI Design', 'Photo Manipulation', 'Basic Video Edit', 'Motion Graphics'].map((skill) => (
+                  <span 
+                    key={skill}
+                    className="px-4 py-2 rounded-full border border-zinc-800 bg-transparent font-sans text-zinc-900 text-sm font-bold hover:bg-zinc-100 hover:-translate-y-0.5 hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,0.8)] transition-all cursor-pointer"
+                  >
+                    {skill}
+                  </span>
+                ))}
               </div>
             </div>
           </div>
