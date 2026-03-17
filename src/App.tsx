@@ -495,6 +495,21 @@ export default function App() {
               <h3 className="font-display text-5xl mb-8 uppercase tracking-wide relative z-10">
                 <span className="highlighter-pink">Experiencia</span>
               </h3>
+              <div className="space-y-12">
+                <div className="irregular-border bg-white p-6 relative -rotate-1 z-10">
+                  <div className="washi-tape washi-lavender w-24 -top-4 left-10 rotate-3"></div>
+                  
+                  {/* Overlapping sticker pin */}
+                  <div className="absolute -right-5 -top-5 circular-sticker w-14 h-14 bg-[#bae1ff] text-black z-10 -rotate-6">
+                    <Figma size={24} />
+                  </div>
+
+                  <h4 className="font-bold text-2xl mb-1">Pasantía Diseñadora UX/UI</h4>
+                  <p className="font-serif text-zinc-600 mb-4">Appwise Innovations</p>
+                  <p className="font-serif text-zinc-700 leading-relaxed">
+                    En mi rol como Pasante de Diseño UX/UI en Appwise Innovations, participo en el ciclo completo de creación de productos digitales, diseñando experiencias centradas en el usuario para plataformas web y mobile. Además, aporto una visión estratégica comercial mediante el diseño de presentaciones de alto impacto para la validación de propuestas y presupuestos, combinando en cada entregable la estética, la funcionalidad y los objetivos de negocio de la empresa.
+                  </p>
+                </div>
               <div className="irregular-border bg-white p-6 relative rotate-1 z-10">
                 <div className="washi-tape washi-pink w-24 -top-4 right-10 -rotate-6"></div>
                 <div className="washi-tape washi-pink w-16 -bottom-3 -left-4 rotate-45"></div>
@@ -527,6 +542,7 @@ export default function App() {
                   </li>
                 </ul>
               </div>
+               </div>
             </div>
 
             {/* Idiomas */}
