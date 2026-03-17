@@ -257,7 +257,8 @@ export default function App() {
               ease: "easeInOut",
               delay: 1,
             }}
-            className="absolute bottom-16 left-10 sticker px-3 py-1 md:px-4 md:py-2 bg-[#00FF00] font-bold text-sm md:text-lg z-20"
+            style={{ willChange: "transform" }}
+            className="absolute bottom-16 left-10 px-3 py-1 md:px-4 md:py-2 bg-[#00FF00] font-bold text-sm md:text-lg z-20 border-4 border-black drop-shadow-[4px_4px_0px_rgba(0,0,0,1)] rounded-md backdrop-blur-sm"
           >
             UX/UI
           </motion.div>
@@ -270,7 +271,8 @@ export default function App() {
               ease: "easeInOut",
               delay: 2,
             }}
-            className="absolute bottom-0 left-10 sticker px-3 py-1 md:px-4 md:py-2 bg-[#00FF00] font-bold text-sm md:text-lg z-20"
+            style={{ willChange: "transform" }}
+            className="absolute bottom-0 left-10 px-3 py-1 md:px-4 md:py-2 bg-[#00FF00] font-bold text-sm md:text-lg z-20 border-4 border-black drop-shadow-[4px_4px_0px_rgba(0,0,0,1)] rounded-md backdrop-blur-sm"
           >
             Creative Dev
           </motion.div>
