@@ -545,24 +545,6 @@ export default function App() {
                </div>
             </div>
 
-            {/* Idiomas */}
-            <div className="relative">
-              <AsteriskDoodle
-                className="absolute -right-8 -top-4 z-0 opacity-70"
-                color="#00BFFF"
-              />
-              <h3 className="font-display text-5xl mb-8 uppercase tracking-wide relative z-10">
-                <span className="highlighter-yellow">Idiomas</span>
-              </h3>
-              <div className="flex flex-wrap gap-4">
-                <span className="sticker px-6 py-2 bg-[#ffb3ba] font-bold text-lg -rotate-2">
-                  Español (Nativo)
-                </span>
-                <span className="sticker px-6 py-2 bg-[#baffc9] font-bold text-lg rotate-3">
-                  Inglés (Avanzado)
-                </span>
-              </div>
-            </div>
           </div>
 
           {/* Software & Skills */}
@@ -632,7 +614,20 @@ export default function App() {
                 ))}
               </div>
             </div>
+             {/* Idiomas */}
+            <div className="bg-white border-4 border-black rounded-2xl shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-8 relative rotate-1">
+              <AsteriskDoodle className="absolute -right-8 -top-4 z-0 opacity-70" color="#00BFFF" />
+              <h3 className="font-display text-4xl mb-6 uppercase tracking-wide relative z-10">
+                <span className="highlighter-yellow">Idiomas</span>
+              </h3>
+              <div className="flex flex-wrap gap-4">
+                <span className="sticker px-6 py-2 bg-[#ffb3ba] font-bold text-lg -rotate-2">Español (Nativo)</span>
+                <span className="sticker px-6 py-2 bg-[#baffc9] font-bold text-lg rotate-3">Inglés (Avanzado)</span>
+                <span className="sticker px-6 py-2 bg-[#bae1ff] font-bold text-lg -rotate-1">Portugués (Básico)</span>
+              </div>
+            </div>
           </div>
+          
         </div>
       </section>
 
