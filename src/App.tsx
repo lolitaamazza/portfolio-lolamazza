@@ -75,12 +75,12 @@ const PROJECTS = [
   
   {
     id: 4,
-    title: 'Furniture E-commerce',
-    category: 'Web Design',
+    title: 'Mars Interactive Lab',
+    category: 'Web Design and Development',
     color: "bg-green-400",
     rotation: "rotate-3",
-   image: 'https://mir-s3-cdn-cf.behance.net/projects/max_808/6fb51f231720993.Y3JvcCw5MzUsNzMyLDI1MCww.png',
-    link: 'https://www.behance.net/gallery/231720993/Modern-Furniture-Minimalist-E-commerce-Web-Design',
+    image: 'https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?q=80&w=808&auto=format&fit=crop',
+    link: 'https://2025-mars-p5-webproyect.vercel.app',
   },
   {
     id: 5,
