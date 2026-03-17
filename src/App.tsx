@@ -623,11 +623,10 @@ export default function App() {
               <div className="flex flex-wrap gap-4">
                 <span className="sticker px-6 py-2 bg-[#ffb3ba] font-bold text-lg -rotate-2">Español (Nativo)</span>
                 <span className="sticker px-6 py-2 bg-[#baffc9] font-bold text-lg rotate-3">Inglés (Avanzado)</span>
-                <span className="sticker px-6 py-2 bg-[#bae1ff] font-bold text-lg -rotate-1">Portugués (Básico)</span>
               </div>
             </div>
           </div>
-          
+
         </div>
       </section>
 
