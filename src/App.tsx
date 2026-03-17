@@ -507,7 +507,7 @@ export default function App() {
                   </div>
 
                   <h4 className="font-bold text-2xl mb-1">Pasantía Diseñadora UX/UI</h4>
-                  <p className="font-serif text-zinc-600 mb-4">Appwise Innovations</p>
+                  <p className="font-serif text-zinc-600 mb-4">Appwise Innovations • marzo 2026 - Presente</p>
                   <p className="font-serif text-zinc-700 leading-relaxed">
                     En mi rol como Pasante de Diseño UX/UI en Appwise Innovations, participo en el ciclo completo de creación de productos digitales, diseñando experiencias centradas en el usuario para plataformas web y mobile. Además, aporto una visión estratégica comercial mediante el diseño de presentaciones de alto impacto para la validación de propuestas y presupuestos, combinando en cada entregable la estética, la funcionalidad y los objetivos de negocio de la empresa.
                   </p>
